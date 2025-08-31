@@ -18,35 +18,35 @@ class WeatherTheme {
     this.accentColor,
   });
 
-  static final WeatherTheme nightTheme = WeatherTheme(
+  static const WeatherTheme nightTheme = WeatherTheme(
     backgroundImage: AppAssets.nightBackground,
     weatherIcon: FontAwesomeIcons.solidMoon,
-    primaryTextColor: const Color(0xffcedfff),
-    containerColor: const Color(0xff253A74),
+    primaryTextColor: Color(0xffcedfff),
+    containerColor: Color(0xff253A74),
   );
 
-  static final WeatherTheme sunnyTheme = WeatherTheme(
+  static const WeatherTheme sunnyTheme = WeatherTheme(
     backgroundImage: AppAssets.sunnyBackground,
     weatherIcon: FontAwesomeIcons.sun,
-    primaryTextColor: const Color(0xffbe8667),
-    containerColor: const Color(0xffFAE2BD),
+    primaryTextColor: Color(0xffbe8667),
+    containerColor: Color(0xffFAE2BD),
   );
 
-  static final WeatherTheme cloudyTheme = WeatherTheme(
+  static const WeatherTheme cloudyTheme = WeatherTheme(
     backgroundImage: AppAssets.cloudyBackground,
     weatherIcon: FontAwesomeIcons.cloud,
     primaryTextColor: Color(0xffc2ecff),
     containerColor: Color(0xff5A8BAB),
   );
 
-  static final WeatherTheme rainyTheme = WeatherTheme(
+  static const WeatherTheme rainyTheme = WeatherTheme(
     backgroundImage: AppAssets.rainyBackground,
     weatherIcon: FontAwesomeIcons.cloudRain,
     primaryTextColor: Color(0xffd8fff7),
     containerColor: Color(0xff7FC3AE),
   );
 
-  static final WeatherTheme snowyTheme = WeatherTheme(
+  static const WeatherTheme snowyTheme = WeatherTheme(
     backgroundImage: AppAssets.snowyBackground,
     weatherIcon: FontAwesomeIcons.snowflake,
     primaryTextColor: Color(0xfffefeff),

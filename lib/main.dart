@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: ChangeNotifierProvider(
         create: (_) => WeatherController()..initWeather(),
-        child: MaterialApp(
+        child: const MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Wizardly',
           home: HomeScreen(),

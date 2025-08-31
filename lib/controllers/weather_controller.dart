@@ -17,8 +17,6 @@ class WeatherController extends ChangeNotifier {
     notifyListeners();
     try {
       Position position = await _determinePosition();
-      print('Omar :: Current position: $position');
-
       final weatherData = await weatherService.getWeatherByLocation(
         position.latitude,
         position.longitude,
