@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:wizardly/views/search_screen.dart';
 
 import '../controllers/weather_controller.dart';
-
 import '../models/weather_model.dart';
 import '../styling/weather_theme.dart';
 import '../widgets/animated_weather_background.dart';
@@ -15,8 +16,15 @@ import '../widgets/glass_container.dart';
 import '../widgets/hourly_forecast_card.dart';
 import '../widgets/weather_detail_card.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  var _contentKey = UniqueKey();
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +41,18 @@ class HomeScreen extends StatelessWidget {
           AnimatedWeatherBackground(theme: theme),
           SafeArea(
             child: weatherController.isLoading
-                ? Center(
-                    child: CircularProgressIndicator(
-                      color: theme.primaryTextColor,
-                    ),
-                  )
+                ? _buildLoadingShimmer(theme)
                 : weather == null
                 ? _buildEmptyState(context, weatherController, theme)
                 : RefreshIndicator(
                     color: theme.primaryTextColor,
                     backgroundColor: theme.containerColor,
-                    onRefresh: () => weatherController.refreshWeather(),
+                    onRefresh: () async {
+                      await weatherController.refreshWeather();
+                      setState(() {
+                        _contentKey = UniqueKey();
+                      });
+                    },
                     child: SingleChildScrollView(
                       child: Padding(
                         padding: EdgeInsets.symmetric(
@@ -51,15 +60,32 @@ class HomeScreen extends StatelessWidget {
                           vertical: 16.h,
                         ),
                         child: Column(
+                          key: _contentKey,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            _buildSearchBar(context, weatherController, theme),
+                            _buildSearchBar(context, weatherController, theme)
+                                .animate()
+                                .fade(duration: 500.ms)
+                                .slideY(begin: -1, curve: Curves.easeOutCubic)
+                                .shimmer(duration: 1500.ms),
                             SizedBox(height: 24.h),
-                            _buildMainWeatherInfo(context, weather, theme),
+                            _buildMainWeatherInfo(context, weather, theme)
+                                .animate()
+                                .fade(delay: 100.ms, duration: 500.ms)
+                                .slideX(begin: -0.2, curve: Curves.easeOutCubic)
+                                .shimmer(duration: 1500.ms),
                             SizedBox(height: 24.h),
-                            _buildWeatherDetails(weather, theme),
+                            _buildWeatherDetails(weather, theme)
+                                .animate()
+                                .fade(delay: 200.ms, duration: 500.ms)
+                                .slideX(begin: -0.2, curve: Curves.easeOutCubic)
+                                .shimmer(duration: 1500.ms),
                             SizedBox(height: 20.h),
-                            _buildForecastSection(context, weather, theme),
+                            _buildForecastSection(context, weather, theme)
+                                .animate()
+                                .fade(delay: 300.ms, duration: 500.ms)
+                                .slideX(begin: -0.2, curve: Curves.easeOutCubic)
+                                .shimmer(duration: 1500.ms),
                           ],
                         ),
                       ),
@@ -67,6 +93,63 @@ class HomeScreen extends StatelessWidget {
                   ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildLoadingShimmer(WeatherTheme theme) {
+    return Shimmer.fromColors(
+      baseColor: theme.containerColor.withValues(alpha: 0.9),
+      highlightColor: Colors.white70,
+      child: SingleChildScrollView(
+        physics: const NeverScrollableScrollPhysics(),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Placeholder for Search Bar
+              Container(
+                height: 48.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(50.r),
+                ),
+              ),
+              SizedBox(height: 24.h),
+              // Placeholder for Main Weather Info
+              Container(
+                height: 270.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25.r),
+                ),
+              ),
+              SizedBox(height: 24.h),
+              // Placeholder for Weather Details
+              Container(
+                height: 250.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25.r),
+                ),
+              ),
+              SizedBox(height: 20.h),
+              // Placeholder for Forecast Section
+              Container(
+                height: 150.h,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25.r),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

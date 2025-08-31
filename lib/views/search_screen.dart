@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wizardly/widgets/animated_weather_background.dart';
 import 'package:wizardly/widgets/glass_container.dart';
@@ -68,104 +69,125 @@ class _SearchScreenState extends State<SearchScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _buildSearchBar(context, weatherController, theme),
+                  _buildSearchBar(
+                    context,
+                    weatherController,
+                    theme,
+                  ).animate().shimmer(duration: 1000.ms),
                   SizedBox(height: 24.h),
                   GlassContainer(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 16.h,
-                    ),
-                    backgroundColor: theme.containerColor,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Current city',
-                          style: TextStyle(
-                            color: theme.primaryTextColor,
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16.w,
+                          vertical: 16.h,
                         ),
-                        SizedBox(height: 8.h),
-                        // Current city chip
-                        ActionChip(
-                          avatar: Icon(
-                            Icons.location_on,
-                            color: theme.primaryTextColor,
-                            size: 18.sp,
-                          ),
-                          label: Text('${weatherController.weather?.cityName}'),
-                          labelStyle: TextStyle(color: theme.primaryTextColor),
-                          backgroundColor: theme.containerColor.withValues(
-                            alpha: 0.8,
-                          ),
-                          onPressed: () => _onCitySelected(
-                            weatherController.weather?.cityName ?? '',
-                          ),
+                        backgroundColor: theme.containerColor,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Current city',
+                              style: TextStyle(
+                                color: theme.primaryTextColor,
+                                fontSize: 20.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 8.h),
+                            // Current city chip
+                            ActionChip(
+                              avatar: Icon(
+                                Icons.location_on,
+                                color: theme.primaryTextColor,
+                                size: 18.sp,
+                              ),
+                              label: Text(
+                                '${weatherController.weather?.cityName}',
+                              ),
+                              labelStyle: TextStyle(
+                                color: theme.primaryTextColor,
+                              ),
+                              backgroundColor: theme.containerColor.withValues(
+                                alpha: 0.8,
+                              ),
+                              side: BorderSide.none,
+                              onPressed: () => _onCitySelected(
+                                weatherController.weather?.cityName ?? '',
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
+                      )
+                      .animate()
+                      .fade(duration: 500.ms)
+                      .slideX(begin: 0.2, curve: Curves.easeOutCubic)
+                      .shimmer(duration: 1500.ms),
                   SizedBox(height: 24.h),
                   GlassContainer(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 16.h,
-                    ),
-                    backgroundColor: theme.containerColor,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Top cities',
-                          style: TextStyle(
-                            color: theme.primaryTextColor,
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16.w,
+                          vertical: 16.h,
                         ),
-                        SizedBox(height: 12.h),
-                        Wrap(
-                          spacing: 8.0.w,
-                          runSpacing: 8.0.h,
-                          children: topCitiesEgypt
-                              .map((city) => _buildCityChip(city, theme))
-                              .toList(),
+                        backgroundColor: theme.containerColor,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Top cities',
+                              style: TextStyle(
+                                color: theme.primaryTextColor,
+                                fontSize: 20.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 12.h),
+                            Wrap(
+                              spacing: 8.0.w,
+                              runSpacing: 8.0.h,
+                              children: topCitiesEgypt
+                                  .map((city) => _buildCityChip(city, theme))
+                                  .toList(),
+                            ),
+                            SizedBox(height: 24.h),
+                          ],
                         ),
-                        SizedBox(height: 24.h),
-                      ],
-                    ),
-                  ),
+                      )
+                      .animate()
+                      .fade(duration: 500.ms)
+                      .slideX(begin: 0.2, curve: Curves.easeOutCubic)
+                      .shimmer(duration: 1500.ms),
                   SizedBox(height: 24.h),
                   GlassContainer(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 16.w,
-                      vertical: 16.h,
-                    ),
-                    backgroundColor: theme.containerColor,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Top cities - World',
-                          style: TextStyle(
-                            color: theme.primaryTextColor,
-                            fontSize: 20.sp,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 16.w,
+                          vertical: 16.h,
                         ),
-                        SizedBox(height: 12.h),
-                        Wrap(
-                          spacing: 8.0.w,
-                          runSpacing: 8.0.h,
-                          children: topCitiesWorld
-                              .map((city) => _buildCityChip(city, theme))
-                              .toList(),
+                        backgroundColor: theme.containerColor,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Top cities - World',
+                              style: TextStyle(
+                                color: theme.primaryTextColor,
+                                fontSize: 20.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(height: 12.h),
+                            Wrap(
+                              spacing: 8.0.w,
+                              runSpacing: 8.0.h,
+                              children: topCitiesWorld
+                                  .map((city) => _buildCityChip(city, theme))
+                                  .toList(),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
+                      )
+                      .animate()
+                      .fade(duration: 500.ms)
+                      .slideX(begin: 0.2, curve: Curves.easeOutCubic)
+                      .shimmer(duration: 1500.ms),
                 ],
               ),
             ),
