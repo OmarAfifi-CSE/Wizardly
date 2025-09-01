@@ -28,7 +28,7 @@
 
 ---
 
-Wizardly isn't just another weather app; it's an experience. It provides accurate, real-time weather information in a beautiful and immersive interface. The entire application theme—from the animated background to the color of the text and icons—gracefully adapts to the weather, creating a unique and delightful user experience every time you open it.
+Wizardly is an atmospheric experience, not just another weather app. It delivers accurate, real-time forecasts through a beautiful and fully immersive interface. The entire application theme, from colors to animated backgrounds, dynamically transforms to match the live weather, creating a unique and delightful experience with every launch.
 
 ## 📸 A Tour Through the Magical Themes
 
