@@ -35,52 +35,52 @@ Wizardly's core feature is its dynamic UI that reflects the weather in each city
 <br>
 <table width="100%">
 <tr>
-    <td width="50%" valign="top">
-        <h4 align="center">☀️ Sunny Day in Cairo</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/2" alt="Sunny Weather Theme" width="300">
-        </p>
-        <p>When the sun is out, the app is bathed in a warm, inviting orange glow. The UI is bright and cheerful, perfectly matching the clear skies.</p>
-    </td>
-    <td width="50%" valign="top">
-        <h4 align="center">💧 Rainy Day in Sierra Leone</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/1" alt="Rainy Weather Theme" width="300">
-        </p>
-        <p>For rainy days, the app adopts a cool, tranquil green theme. The animated background shows gentle rain, creating a calming, immersive effect.</p>
-    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">☀️ Sunny Day in Cairo</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/2" alt="Sunny Weather Theme" width="300">
+        </p>
+        <p>When the sun is out, the app is bathed in a warm, inviting orange glow. The UI is bright and cheerful, perfectly matching the clear skies.</p>
+    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">💧 Rainy Day in Sierra Leone</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/1" alt="Rainy Weather Theme" width="300">
+        </p>
+        <p>For rainy days, the app adopts a cool, tranquil green theme. The animated background shows gentle rain, creating a calming, immersive effect.</p>
+    </td>
 </tr>
 <tr>
-    <td width="50%" valign="top">
-        <h4 align="center">❄️ Snowy Weather in Greenland</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/0" alt="Snowy Weather Theme" width="300">
-        </p>
-        <p>During a snowfall, the interface shifts to a crisp, cool lavender palette with a beautiful animated snow background, making you feel the winter chill.</p>
-    </td>
-    <td width="50%" valign="top">
-        <h4 align="center">🌙 Clear Night in Mountain View</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/4" alt="Night Theme" width="300">
-        </p>
-        <p>After sunset, the app transitions to a deep, serene blue night theme. The UI is calm and easy on the eyes, perfect for checking the weather before bed.</p>
-    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">❄️ Snowy Weather in Greenland</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/0" alt="Snowy Weather Theme" width="300">
+        </p>
+        <p>During a snowfall, the interface shifts to a crisp, cool lavender palette with a beautiful animated snow background, making you feel the winter chill.</p>
+    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">🌙 Clear Night in Mountain View</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/4" alt="Night Theme" width="300">
+        </p>
+        <p>After sunset, the app transitions to a deep, serene blue night theme. The UI is calm and easy on the eyes, perfect for checking the weather before bed.</p>
+    </td>
 </tr>
 <tr>
-    <td width="50%" valign="top">
-        <h4 align="center">☁️ Cloudy Skies in London</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/5" alt="Cloudy Weather Theme" width="300">
-        </p>
-        <p>For overcast conditions, the app uses a soothing blue-grey theme, reflecting a sky filled with clouds.</p>
-    </td>
-    <td width="50%" valign="top">
-        <h4 align="center">🔍 Intuitive City Search</h4>
-        <p align="center">
-            <img src="https://googleusercontent.com/file_content/3" alt="Search Screen" width="300">
-        </p>
-        <p>The search screen maintains the current theme, providing a seamless and consistent user experience while you look for your next destination.</p>
-    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">☁️ Cloudy Skies in London</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/5" alt="Cloudy Weather Theme" width="300">
+        </p>
+        <p>For overcast conditions, the app uses a soothing blue-grey theme, reflecting a sky filled with clouds.</p>
+    </td>
+    <td width="50%" valign="top">
+        <h4 align="center">🔍 Intuitive City Search</h4>
+        <p align="center">
+            <img src="https://googleusercontent.com/file_content/3" alt="Search Screen" width="300">
+        </p>
+        <p>The search screen maintains the current theme, providing a seamless and consistent user experience while you look for your next destination.</p>
+    </td>
 </tr>
 </table>
 </details>
@@ -96,9 +96,9 @@ Wizardly is packed with features to make checking the weather a delightful exper
 -   **📍 Automatic Location Detection:** On startup, the app instantly finds and displays the weather for your current location.
 -   **📊 Comprehensive Details:** Access all the info you need: "Feels Like" temperature, humidity, wind speed, pressure, and visibility.
 -   **🗓️ Hourly & Daily Forecasts:** Plan ahead with a 24-hour hourly forecast and a 7-day outlook.
--   **💎 glassy UI:** Modern, frosted-glass components create a sleek and elegant look.
+-   **💎 Glassy UI:** Modern, frosted-glass components create a sleek and elegant look.
 -   **🔄 Pull to Refresh:** Easily update the weather data with a simple downward swipe.
--   **🎬 Smooth Animations:** Built with fluid transitions for a polished and responsive feel.
+-   **🎬 Stunning Animations:** Powered by `flutter_animate`, fluid transitions and effects bring the UI to life, while `shimmer` provides an elegant loading experience.
 
 ---
 
@@ -109,10 +109,13 @@ Wizardly is built with a modern and robust Flutter stack, focusing on clean arch
 -   **Core:** **Flutter & Dart**
 -   **State Management:** **Provider** for simple and effective state management.
 -   **Networking:** **Dio** for robust and reliable API requests.
+-   **UI & Animations:**
+    -   `flutter_animate`: For crafting beautiful and complex UI animations with ease.
+    -   `shimmer`: To provide elegant loading skeletons (placeholders) while data is fetched.
+    -   `weather_animation`: The magic behind the beautiful animated backgrounds.
 -   **Key Utility Packages:**
     -   `geolocator`: For automatically detecting the user's location.
     -   `flutter_screenutil`: For building a fully responsive and adaptive UI.
-    -   `weather_animation`: The magic behind the beautiful animated backgrounds.
     -   `font_awesome_flutter`: For a rich and diverse icon set.
     -   `intl` & `timeago`: For user-friendly date and time formatting.
 
