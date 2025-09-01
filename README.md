@@ -20,9 +20,9 @@
 
 <div align="center">
 
-[![Platform](https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter&style=for-the-badge)](https://flutter.dev)
-[![State Management](https://img.shields.io/badge/State-Provider-blue?style=for-the-badge&logo=flutter)](https://pub.dev/packages/provider)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Platform](https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter)](https://flutter.dev)
+[![State Management](https://img.shields.io/badge/State-Provider-blue?logo=flutter)](https://pub.dev/packages/provider)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/OmarAfifi-CSE/Wizardly/blob/master/LICENSE)
 
 </div>
 
