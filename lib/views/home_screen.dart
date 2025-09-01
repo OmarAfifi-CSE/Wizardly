@@ -169,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(height: 20.h),
           Center(
             child: Text(
-              'Search for a city to get started!',
+              'Please connect to the internet first!',
               style: TextStyle(color: theme.primaryTextColor, fontSize: 18.sp),
               textAlign: TextAlign.center,
             ),
