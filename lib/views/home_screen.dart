@@ -403,7 +403,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _buildHourlyForecast(Weather weather, WeatherTheme theme) {
-    final int currentHour = DateTime.now().hour;
+    final int currentHour = int.parse(weather.localtime.substring(0, 2));
     // Get today's remaining hourly forecasts
     final List<HourlyForecast> upcomingToday = weather.hourlyForecasts.where((
       forecast,

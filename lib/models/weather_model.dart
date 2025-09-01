@@ -56,6 +56,7 @@ class DailyForecast {
 }
 
 class Weather {
+  final String localtime;
   final int lastUpdatedEpoch;
   final String cityName;
   final String country;
@@ -73,6 +74,7 @@ class Weather {
   final List<DailyForecast> dailyForecasts;
 
   Weather({
+    required this.localtime,
     required this.lastUpdatedEpoch,
     required this.cityName,
     required this.country,
@@ -91,7 +93,9 @@ class Weather {
   });
 
   String get lastUpdatedFormatted {
-    final lastUpdatedDateTime = DateTime.fromMillisecondsSinceEpoch(lastUpdatedEpoch * 1000);
+    final lastUpdatedDateTime = DateTime.fromMillisecondsSinceEpoch(
+      lastUpdatedEpoch * 1000,
+    );
     return timeago.format(lastUpdatedDateTime, locale: 'en_short');
   }
 
@@ -103,6 +107,7 @@ class Weather {
         .toList();
 
     return Weather(
+      localtime: (json['location']['localtime'] as String).substring(11),
       lastUpdatedEpoch: (json['current']['last_updated_epoch'] as num).toInt(),
       cityName: json['location']['name'],
       country: json['location']['country'],
