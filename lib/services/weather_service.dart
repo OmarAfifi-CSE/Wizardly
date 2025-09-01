@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
 
 class WeatherService {
-  final String apiKey = 'c3a96b9081eb41a983b182019252308';
-  final String baseUrl = "http://api.weatherapi.com/v1/forecast.json";
-  final Dio dio;
+  final String _apiKey = 'c3a96b9081eb41a983b182019252308';
+  final String _baseUrl = "http://api.weatherapi.com/v1/forecast.json";
+  final Dio _dio;
 
-  WeatherService() : dio = Dio();
+  WeatherService() : _dio = Dio();
 
   Future<Map<String, dynamic>> getWeatherByCity(String city) async {
     try {
-      final response = await dio.get(
-        baseUrl,
-        queryParameters: {'key': apiKey, 'q': city, 'days': 7, 'aqi': 'no'},
+      final response = await _dio.get(
+        _baseUrl,
+        queryParameters: {'key': _apiKey, 'q': city, 'days': 7, 'aqi': 'no'},
       );
       if (response.statusCode == 200) {
         return response.data;
@@ -32,10 +32,10 @@ class WeatherService {
     double lon,
   ) async {
     try {
-      final response = await dio.get(
-        baseUrl,
+      final response = await _dio.get(
+        _baseUrl,
         queryParameters: {
-          'key': apiKey,
+          'key': _apiKey,
           'q': '$lat,$lon',
           'days': 7,
           'aqi': 'no',
