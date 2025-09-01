@@ -1,9 +1,13 @@
 <div align="center">
-
-# Wizardly 🧙‍♂️✨
-
-<img alt="Wizardly Logo" src="https://googleusercontent.com/file_content/5" width="150">
-
+    
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.png">
+  <img alt="Wizardly Logo" src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.png" width="100">
+</picture>
+    
+<p align="center">
+  <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Mockups.gif" alt="Wizardly App Demo" width="900"/>
+</p>
 </div>
 
 <div align="center">
