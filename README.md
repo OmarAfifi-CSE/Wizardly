@@ -1,8 +1,8 @@
 <div align="center">
     
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.png">
-  <img alt="Wizardly Logo" src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.png" width="100">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.webp">
+  <img alt="Wizardly Logo" src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/Logo.webp" width="100">
 </picture>
     
 <p align="center">
@@ -40,14 +40,14 @@ Wizardly's core feature is its dynamic UI that reflects the weather in each city
     <td width="50%" valign="top">
         <h4 align="center">☀️ Sunny Day</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/1-%20Sunny%20Weather.png" alt="Sunny Weather Theme" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/1-%20Sunny%20Weather.webp" alt="Sunny Weather Theme" width="300">
         </p>
         <p>When the sun is out, the app is bathed in a warm, inviting orange glow. The UI is bright and cheerful, perfectly matching the clear skies.</p>
     </td>
     <td width="50%" valign="top">
         <h4 align="center">🔍 Intuitive City Search</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/2-%20Search%20Screen.png" alt="Search Screen" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/2-%20Search%20Screen.webp" alt="Search Screen" width="300">
         </p>
         <p>The search screen maintains the current theme, providing a seamless and consistent user experience while you look for your next destination.</p>
     </td>
@@ -56,14 +56,14 @@ Wizardly's core feature is its dynamic UI that reflects the weather in each city
     <td width="50%" valign="top">
         <h4 align="center">☁️ Cloudy Skies</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/3-%20Cloudy%20Weather.png" alt="Cloudy Weather Theme" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/3-%20Cloudy%20Weather.webp" alt="Cloudy Weather Theme" width="300">
         </p>
         <p>For overcast conditions, the app uses a soothing blue-grey theme, reflecting a sky filled with clouds.</p>
     </td>
     <td width="50%" valign="top">
         <h4 align="center">💧 Rainy Day</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/4-%20Rainy%20Weather.png" alt="Rainy Weather Theme" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/4-%20Rainy%20Weather.webp" alt="Rainy Weather Theme" width="300">
         </p>
         <p>For rainy days, the app adopts a cool, tranquil green theme. The animated background shows gentle rain, creating a calming, immersive effect.</p>
     </td>
@@ -73,14 +73,14 @@ Wizardly's core feature is its dynamic UI that reflects the weather in each city
     <td width="50%" valign="top">
         <h4 align="center">❄️ Snowy Weather</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/5-%20Snowy%20Weather.png" alt="Snowy Weather Theme" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/5-%20Snowy%20Weather.webp" alt="Snowy Weather Theme" width="300">
         </p>
         <p>During a snowfall, the interface shifts to a crisp, cool lavender palette with a beautiful animated snow background, making you feel the winter chill.</p>
     </td>
     <td width="50%" valign="top">
         <h4 align="center">🌙 Clear Night</h4>
         <p align="center">
-            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/6-%20Night%20Weather.png" alt="Night Theme" width="300">
+            <img src="https://github.com/OmarAfifi-CSE/Wizardly/blob/master/assets/screenshots/6-%20Night%20Weather.webp" alt="Night Theme" width="300">
         </p>
         <p>After sunset, the app transitions to a deep, serene blue night theme. The UI is calm and easy on the eyes, perfect for checking the weather before bed.</p>
     </td>
